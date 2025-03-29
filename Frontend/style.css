@@ -1,35 +1,75 @@
-@import url("https://fonts.googleapis.com/css2?family=MedievalSharp&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 body {
-  padding: 10px;
-  font-family: "MedievalSharp";
+  padding: 20px;
+  font-family: "Roboto", sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
 }
 
 .subHeader {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.searchForm input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.searchFilters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .allCountries {
   display: flex;
-  gap: 15px;
+  gap: 20px;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .country {
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 0 5px black;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
-  padding: 10px;
+  padding: 15px;
+  background-color: white;
   gap: 10px;
-  transition: ease 200ms;
+  transition: transform 0.2s ease;
 }
 
 .country:hover {
   cursor: pointer;
-  transform: scale(1.05, 1.05);
-  transition: ease 200ms;
+  transform: scale(1.05);
+}
+/* Estilização do botão de detalhes */
+.details-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.details-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.details-button:active {
+  transform: scale(0.95);
 }
