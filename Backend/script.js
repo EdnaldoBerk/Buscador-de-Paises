@@ -32,6 +32,7 @@ function renderCountries(allCountries) {
         alt="${country.flags?.alt || 'Bandeira'}"
       />
       <span>${country.name?.common || 'Desconhecido'}</span>
+      <button class="details-button" onclick="viewDetails('${country.cca3}')">Ver detalhes</button>
     `;
 
     container.appendChild(card);
@@ -56,4 +57,12 @@ function localSearch(input) {
   renderCountries(searchedCountries);
 }
 
+function viewDetails(countryCode) {
+  localStorage.setItem("selectedCountry", countryCode);
+  window.location.href = "/Frontend/paginasecundaria.html";
+}
+
 searchCountries("all");
+
+
+
