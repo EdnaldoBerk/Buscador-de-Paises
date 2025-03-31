@@ -59,7 +59,7 @@ function localSearch(input) {
 
 function viewDetails(countryCode) {
   localStorage.setItem("selectedCountry", countryCode);
-  window.location.href = "/Frontend/paginasecundaria.html";
+  window.location.href = "paginasecundaria.html";
 }
 
 searchCountries("all");
