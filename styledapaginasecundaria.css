@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Melhorias na página de detalhes */
+.country-details {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background: #f8f9fa;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.country-details img {
+  width: 200px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.country-details p {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.country-details a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.country-details a:hover {
+  text-decoration: underline;
+}
+
+/* Estilização do cabeçalho */
+header {
+  display: flex;
+  justify-content: center; /* Centraliza o texto */
+  align-items: center;
+  position: relative; /* Para posicionamento do botão */
+  padding: 15px;
+  font-size: 15px;
+  font-family: "Oswald", sans-serif;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Estilização do botão de modo escuro */
+.theme-button {
+  position: absolute;
+  right: 15px; /* Posiciona no canto superior direito */
+  top: 45%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.3s ease-in-out;
+}
+
+.theme-button:hover {
+  transform: scale(1.2);
+}
+
+/* Modo escuro */
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-mode .country-details {
+  background: #1e1e1e;
+  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .back-button {
+  background-color: #0056b3;
+}
+
+.dark-mode .back-button:hover {
+  background-color: #0056b3;
+}
+
+.dark-mode a {
+  color: #90caf9;
+}
+
+
+/* Estilização do botão Voltar */
+.back-button {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin: 20px auto 0;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.back-button:active {
+  transform: scale(0.95);
+}
+
