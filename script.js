@@ -65,13 +65,7 @@ function viewDetails(countryCode) {
 searchCountries("all");
 
 document.addEventListener("DOMContentLoaded", () => {
-  const themeToggle = document.createElement("button");
-  themeToggle.id = "theme-toggle";
-  themeToggle.classList.add("theme-button");
-  document.body.appendChild(themeToggle);
-
-  const body = document.body;
-
+  
   // Verifica se há um tema salvo no localStorage
   if (localStorage.getItem("theme") === "dark") {
       body.classList.add("dark-mode");
