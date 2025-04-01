@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* Melhorias na página de detalhes */
+
 .country-details {
   max-width: 600px;
   margin: 20px auto;
@@ -33,22 +33,21 @@
   text-decoration: underline;
 }
 
-/* Estilização do cabeçalho */
+
 header {
   display: flex;
-  justify-content: center; /* Centraliza o texto */
+  justify-content: center; 
   align-items: center;
-  position: relative; /* Para posicionamento do botão */
+  position: relative; 
   padding: 15px;
   font-size: 15px;
   font-family: "Oswald", sans-serif;
   transition: color 0.3s ease-in-out;
 }
 
-/* Estilização do botão de modo escuro */
 .theme-button {
   position: absolute;
-  right: 15px; /* Posiciona no canto superior direito */
+  right: 15px; 
   top: 45%;
   transform: translateY(-50%);
   background: none;
@@ -62,7 +61,6 @@ header {
   transform: scale(1.2);
 }
 
-/* Modo escuro */
 .dark-mode {
   background-color: #121212;
   color: white;
@@ -86,7 +84,6 @@ header {
 }
 
 
-/* Estilização do botão Voltar */
 .back-button {
   display: block;
   width: 100%;
