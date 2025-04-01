@@ -5,8 +5,30 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: #f5f5f5;
   color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* MODO ESCURO */
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-mode .country {
+  background-color: #1e1e1e;
+  color: white;
+  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .details-button {
+  background-color: #ff4c4c;
+}
+
+.dark-mode .details-button:hover {
+  background-color: #e04343;
+}
+
+/* Cabeçalho e Filtros */
 .subHeader {
   display: flex;
   justify-content: space-between;
@@ -15,19 +37,30 @@ body {
   margin-bottom: 20px;
 }
 
+/* Campos de Busca */
 .searchForm input {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
+  background-color: white;
+  color: black;
 }
 
+.dark-mode .searchForm input {
+  background-color: #333;
+  color: white;
+  border: 1px solid #777;
+}
+
+/* Filtros */
 .searchFilters {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
+/* Lista de países */
 .allCountries {
   display: flex;
   gap: 20px;
@@ -37,6 +70,7 @@ body {
   margin: 0 auto;
 }
 
+/* Cartão de país */
 .country {
   display: flex;
   flex-direction: column;
@@ -46,13 +80,14 @@ body {
   padding: 15px;
   background-color: white;
   gap: 10px;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
 .country:hover {
   cursor: pointer;
   transform: scale(1.05);
 }
+
 /* Estilização do botão de detalhes */
 .details-button {
   background-color: #007bff;
@@ -73,3 +108,42 @@ body {
 .details-button:active {
   transform: scale(0.95);
 }
+
+/* Botão de alternância do modo escuro */
+.theme-button {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.3s ease-in-out;
+}
+
+.theme-button:hover {
+  transform: scale(1.2);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+  font-size: 16px;
+  background-color: #f5f5f5;
+  color: #333;
+  font-family: "Roboto", sans-serif;
+  box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.2); /* Sombreamento na parte superior */
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  left: -20px;
+}
+
+/* Modo escuro para o rodapé */
+.dark-mode footer {
+  background-color: #1e1e1e;
+  color: white;
+  box-shadow: 0px -4px 8px rgba(255, 255, 255, 0.2); /* Ajusta o sombreamento para modo escuro */
+}
+
