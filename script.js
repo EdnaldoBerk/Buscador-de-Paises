@@ -64,5 +64,35 @@ function viewDetails(countryCode) {
 
 searchCountries("all");
 
+document.addEventListener("DOMContentLoaded", () => {
+  const themeToggle = document.createElement("button");
+  themeToggle.id = "theme-toggle";
+  themeToggle.classList.add("theme-button");
+  document.body.appendChild(themeToggle);
+
+  const body = document.body;
+
+  // Verifica se há um tema salvo no localStorage
+  if (localStorage.getItem("theme") === "dark") {
+      body.classList.add("dark-mode");
+      themeToggle.textContent = "😎"; // Ícone para modo claro
+  } else {
+      themeToggle.textContent = "😴"; // Ícone para modo escuro
+  }
+
+  themeToggle.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+
+      // Salva a preferência no localStorage
+      if (body.classList.contains("dark-mode")) {
+          localStorage.setItem("theme", "dark");
+          themeToggle.textContent = "😎"; // Modo claro
+      } else {
+          localStorage.setItem("theme", "light");
+          themeToggle.textContent = "😴"; // Modo escuro
+      }
+  });
+});
+
 
 
