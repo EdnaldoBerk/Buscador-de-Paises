@@ -65,12 +65,11 @@ function viewDetails(countryCode) {
 searchCountries("all");
 
 document.addEventListener("DOMContentLoaded", () => {
-  const themeToggle = document.getElementById("theme-toggle"); // Agora pega do HTML
+  const themeToggle = document.getElementById("theme-toggle"); 
   const body = document.body;
 
-  if (!themeToggle) return; // Garante que o botão existe antes de modificar
+  if (!themeToggle) return;
 
-  // Verifica o tema salvo
   if (localStorage.getItem("theme") === "dark") {
       body.classList.add("dark-mode");
       themeToggle.textContent = "😎";
