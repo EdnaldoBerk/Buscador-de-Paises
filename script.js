@@ -65,28 +65,32 @@ function viewDetails(countryCode) {
 searchCountries("all");
 
 document.addEventListener("DOMContentLoaded", () => {
-  
-  // Verifica se há um tema salvo no localStorage
+  const themeToggle = document.getElementById("theme-toggle"); // Agora pega do HTML
+  const body = document.body;
+
+  if (!themeToggle) return; // Garante que o botão existe antes de modificar
+
+  // Verifica o tema salvo
   if (localStorage.getItem("theme") === "dark") {
       body.classList.add("dark-mode");
-      themeToggle.textContent = "😎"; // Ícone para modo claro
+      themeToggle.textContent = "😎";
   } else {
-      themeToggle.textContent = "😴"; // Ícone para modo escuro
+      themeToggle.textContent = "😴";
   }
 
   themeToggle.addEventListener("click", () => {
       body.classList.toggle("dark-mode");
 
-      // Salva a preferência no localStorage
       if (body.classList.contains("dark-mode")) {
           localStorage.setItem("theme", "dark");
-          themeToggle.textContent = "😎"; // Modo claro
+          themeToggle.textContent = "😎";
       } else {
           localStorage.setItem("theme", "light");
-          themeToggle.textContent = "😴"; // Modo escuro
+          themeToggle.textContent = "😴";
       }
   });
 });
+
 
 
 
