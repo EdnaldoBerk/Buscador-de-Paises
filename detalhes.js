@@ -36,22 +36,20 @@ async function loadCountryDetails() {
     const themeToggle = document.getElementById("theme-toggle");
     const body = document.body;
 
-    // Verifica se há uma configuração salva no localStorage
     if (localStorage.getItem("theme") === "dark") {
         body.classList.add("dark-mode");
-        themeToggle.textContent = "😎"; // Ícone de sol para modo claro
+        themeToggle.textContent = "😎";
     }
 
     themeToggle.addEventListener("click", () => {
         body.classList.toggle("dark-mode");
 
-        // Salva a preferência no localStorage
         if (body.classList.contains("dark-mode")) {
             localStorage.setItem("theme", "dark");
-            themeToggle.textContent = "😎"; // Muda para modo claro
+            themeToggle.textContent = "😎";
         } else {
             localStorage.setItem("theme", "light");
-            themeToggle.textContent = "😴"; // Muda para modo escuro
+            themeToggle.textContent = "😴";
         }
     });
 });
